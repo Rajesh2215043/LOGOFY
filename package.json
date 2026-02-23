@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.5",
+    "@google/genai": "^1.23.0",
     "@google/generative-ai": "^0.22.0",
     "@radix-ui/react-slot": "^1.1.2",
     "@tsparticles/engine": "^3.8.1",
