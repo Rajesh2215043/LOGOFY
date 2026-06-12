@@ -1,0 +1,39 @@
+{
+  "name": "ai-logo-generator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^6.38.2",
+    "@google/genai": "^1.23.0",
+    "@google/generative-ai": "^0.22.0",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "axios": "^1.8.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
+    "firebase": "^11.4.0",
+    "framer-motion": "^12.5.0",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.477.0",
+    "next": "^16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "replicate": "^1.0.1",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/react": "^19.0.10",
+    "tailwindcss": "^4"
+  }
+}
