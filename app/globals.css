@@ -125,7 +125,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   :root {
     --font-alumni-sans: var(--font-alumni-sans);
@@ -169,3 +169,4 @@
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+

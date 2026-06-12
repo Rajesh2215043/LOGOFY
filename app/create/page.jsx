@@ -41,6 +41,18 @@ function page() {
     });
   };
 
+  const isContinueDisabled = () => {
+    if (!formData) return true;
+    switch(step) {
+      case 1: return !formData.title?.trim();
+      case 2: return !formData.desc?.trim();
+      case 3: return !formData.pallete;
+      case 4: return !formData.design?.title; // Assuming design is an object with title, or just check truthy
+      case 5: return !formData.idea?.trim();
+      default: return false;
+    }
+  };
+
   // Log formData changes and save to localStorage
   useEffect(() => {
     console.log("formData updated:", formData);
@@ -83,16 +95,19 @@ function page() {
         />
       ) : null}
 
-      <div className="flex justify-between mt-10">
-        {step != 1 && (
+      {/* Sticky Bottom Navigation Bar */}
+      <div className="flex justify-between items-center sticky bottom-5 mt-10 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-[0_-4px_15px_-3px_rgba(0,0,0,0.1)] border border-gray-200 z-50">
+        {step != 1 ? (
           <Button variant={"outline"} onClick={() => setStep(step - 1)}>
-            <ArrowLeft />
+            <ArrowLeft className="mr-2" />
             Previous
           </Button>
+        ) : (
+          <div></div> // Empty div to keep 'Continue' on the right
         )}
-        <Button onClick={() => setStep(step + 1)}>
-          <ArrowRight />
+        <Button onClick={() => setStep(step + 1)} disabled={isContinueDisabled()}>
           Continue
+          <ArrowRight className="ml-2" />
         </Button>
       </div>
     </div>
